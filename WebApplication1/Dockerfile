@@ -1,7 +1,9 @@
 # Use the official ASP.NET image for runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-EXPOSE 5052  # Adjusted to match your application port
+
+# Expose port 5052 for your application
+EXPOSE 5052
 
 # Use the official .NET SDK image for building the application
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
